@@ -14,9 +14,27 @@ class Overworld {
         };
         testMap.src = './images/maps/DemoLower.png';
 
-        // Test Hero
+        // Hero Shadow
         let x = 1;
         let y = 4;
+        
+        const shadow = new Image();
+        shadow.onload = () => {
+            this.ctx.drawImage(
+                shadow,
+                0,
+                0,
+                32,
+                32,
+                x *16 - 8,
+                y * 16 - 18,
+                32,
+                32
+            );
+        }
+        shadow.src = '/images/characters/shadow.png';
+
+        // Test Hero
         const hero = new Image();
         hero.onload = () => {
             // this.ctx.drawImage(hero, 0, 0);
@@ -30,7 +48,7 @@ class Overworld {
                 y * 16 - 18, // position. We substract for nudging the character to where we want him.
                 32, // size of character on screen
                 32  // size of character on screen
-            )
+            );
         };
         hero.src= '/images/characters/people/hero.png';
     }
