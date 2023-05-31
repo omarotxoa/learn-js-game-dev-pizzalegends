@@ -19,6 +19,8 @@
     transform: scale(2) translateY(30%);
   }
   
+
+  /* Sharpens up Pixel art if blurry */
   .game-container canvas {
     image-rendering: pixelated;
   }
